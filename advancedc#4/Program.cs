@@ -25,7 +25,7 @@ namespace advancedc_4
         public override string ToString()
         {
             return $"\"{BookTitle}\" (ISBN: {BookISBN}) by {string.Join(", ", BookAuthors)} " +
-                   $"- Released on {ReleaseDate.ToString("MMMM dd, yyyy", CultureInfo.InvariantCulture)} - " +
+                   $"- Released on {ReleaseDate.ToString("MMMM dd, yyyy")} - " +
                    $"Cost: {BookPrice:C2}";
         }
     }
@@ -44,7 +44,7 @@ namespace advancedc_4
 
         public static string FetchPrice(LibraryBook book)
         {
-            return book != null ? book.BookPrice.ToString("C2", CultureInfo.InvariantCulture) : "Price Unavailable";
+            return book != null ? book.BookPrice.ToString("C2") : "Price Unavailable";
         }
     }
     public class Book
